@@ -1,0 +1,23 @@
+{
+	"admin": [
+		{"name": "bishi_admin", "pass": "adminIsTheBest"},
+		{"name": "admin_bushi", "pass": "bushiIs1st"}
+	],
+	"hosts": [
+		"http://localhost:3000",
+		"http://localhost:8080",
+		"https://bushi-eb532.firebaseapp.com",
+		"http://ec2-54-169-225-28.ap-southeast-1.compute.amazonaws.com"
+	],
+	"database": {
+		"network": "unix",
+		"address": "/tmp/.s.PGSQL.5432",
+		"data_name": "bushiroad",
+		"user": "phuctk93",
+		"pass": "phuc93"
+	},
+	"example": false,
+	"tls": false,
+	"cert": "fullchain.pem",
+	"key": "privkey.pem"
+}
