@@ -194,7 +194,7 @@ func exportHandler(c *gin.Context) {
 		"S/N", "Score", "Current Position", "Name", "Email Adresses", "Date/Time Registed", "E-Letter sign up",
 	}
 	users := []User{}
-	_, err := pdb.Query(&users, `SELECT * FROM users`)
+	_, err := pdb.Query(&users, `SELECT *, row_number() OVER (ORDER BY score DESC) as rank FROM users`)
 	if err != nil {
 		log.Println(err)
 		c.String(500, "Can't get all record")
